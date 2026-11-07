@@ -1,0 +1,30 @@
+{
+ "model": "google/gemini-2.5-flash",
+ "agreement": {
+  "check_model": "anthropic/claude-haiku-4.5",
+  "sample": 60,
+  "area": 27,
+  "kind": 45,
+  "sentiment": 51
+ },
+ "cost": {
+  "usd": 0.2337,
+  "calls": 64,
+  "by_model": {
+   "google/gemini-2.5-flash": {
+    "calls": 58,
+    "usd": 0.1834,
+    "in": 145923,
+    "out": 55844,
+    "seconds": 259.1
+   },
+   "anthropic/claude-haiku-4.5": {
+    "calls": 6,
+    "usd": 0.0503,
+    "in": 17919,
+    "out": 6476,
+    "seconds": 37.0
+   }
+  }
+ }
+}

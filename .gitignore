@@ -1,0 +1,5 @@
+# The posts themselves stay out of the repository: they belong to the people who wrote them.
+runs/*/items.jsonl
+runs/*/classified.jsonl
+runs/*/labels.partial.*
+__pycache__/

@@ -1,0 +1,328 @@
+{
+ "digest": {
+  "headline": "Fifteen users report their OpenRouter API keys were stolen and balances drained, with activity traced to Janitor and a rumored darknet leak (rd:t3_1xn9dcv, rd:t3_1xnrjwy).",
+  "themes": [
+   {
+    "title": "DeepSeek dominates token volume",
+    "what": "Multiple posts report that DeepSeek accounted for 53% of all tokens on OpenRouter, with open-weight labs totaling over 75%. Users praise DeepSeek v4.1 Flash for its low cost and comparable performance to Claude models.",
+    "ids": [
+     "rd:t3_1xnz5jl",
+     "rd:t3_1xnz8ct",
+     "hn:50371038",
+     "hn:50339168",
+     "hn:50328181",
+     "hn:50323531"
+    ]
+   },
+   {
+    "title": "Pricing and cost comparisons",
+    "what": "Users frequently compare OpenRouter's pricing to direct subscriptions and other providers, with many finding OpenRouter cheaper for pay-as-you-go usage. Several posts note that API usage can be expensive compared to flat subscriptions, while others praise the cost savings from using open-weight models.",
+    "ids": [
+     "rd:t3_1xlkggo",
+     "rd:t3_1xlkmow",
+     "rd:t3_1xnyjcn",
+     "rd:t3_1xo3cqx",
+     "hn:50378366",
+     "hn:50375312",
+     "hn:50368526",
+     "hn:50361624",
+     "hn:50346241",
+     "hn:50339168"
+    ]
+   },
+   {
+    "title": "Questions about credits and billing",
+    "what": "Users ask about payment methods, top-up options, GST charges in India, and how to get the best value from credits. Several report issues with crypto payments and confusion about combining OpenRouter with other subscriptions.",
+    "ids": [
+     "rd:t3_1xk7rcw",
+     "rd:t3_1xk7ugv",
+     "rd:t3_1xkra5x",
+     "rd:t3_1xlg2l7",
+     "rd:t3_1xmqmmp",
+     "rd:t3_1xmrqtk",
+     "rd:t3_1xokxvd",
+     "rd:t3_1xpfp9d",
+     "rd:t3_1xkmphc",
+     "rd:t3_1xkptll"
+    ]
+   },
+   {
+    "title": "Model availability and routing questions",
+    "what": "Users ask why specific models are unavailable or excluded from auto-routing, and report unexpected model switching in subagents. Several posts discuss provider selection and routing to the cheapest options.",
+    "ids": [
+     "rd:t3_1xket12",
+     "rd:t3_1xlvbpc",
+     "rd:t3_1xlvbzh",
+     "rd:t3_1xosskx",
+     "rd:t3_1xndh8w",
+     "rd:t3_1xndhds",
+     "hn:50363413",
+     "hn:50395143"
+    ]
+   },
+   {
+    "title": "Integration showcases and tools",
+    "what": "Developers share tools built on OpenRouter, including frontends, CLI tools, plugins, and integrations with n8n, SillyTavern, and other platforms. Users praise OpenRouter's flexibility for accessing multiple models through a single gateway.",
+    "ids": [
+     "rd:t3_1xl9lss",
+     "rd:t3_1xl9mn8",
+     "rd:t3_1xl9p2h",
+     "rd:t3_1xl9pwf",
+     "rd:t3_1xmt64r",
+     "rd:t3_1xmuiaa",
+     "rd:t3_1xn1tqf",
+     "rd:t3_1xnh8a9",
+     "hn:50331840"
+    ]
+   },
+   {
+    "title": "Free models and free tier usage",
+    "what": "Users discuss free models available on OpenRouter, with some praising Nemotron for availability and others reporting rate limiting or quality issues. Several posts mention using free models for CI/CD and simple automation.",
+    "ids": [
+     "rd:t3_1xk0qaz",
+     "rd:t3_1xk0qfq",
+     "rd:t3_1xk40cs",
+     "rd:t3_1xnjy3h",
+     "hn:50374094",
+     "hn:50374270",
+     "rd:t3_1xpj89j",
+     "rd:t3_1xmjo7y"
+    ]
+   }
+  ],
+  "for_engineering": [
+   {
+    "issue": "Free model requests fail with a 400 error stating provider.only is restricted to Anthropic.",
+    "where": "GitHub issue on anomalyco/opencode",
+    "ids": [
+     "gh:6165614174"
+    ]
+   },
+   {
+    "issue": "The OpenRouter SDK loses the abort signal after garbage collection in Node.js, causing requests to continue and be billed.",
+    "where": "GitHub issue on OpenRouterTeam/typescript-sdk",
+    "ids": [
+     "gh:6165978220"
+    ]
+   },
+   {
+    "issue": "OpenRouter quota checks time out, preventing users from verifying their usage limits.",
+    "where": "GitHub issue on anomalyco/opencode",
+    "ids": [
+     "gh:6132281827"
+    ]
+   },
+   {
+    "issue": "The withStreamErrorHandling function drops a promise, causing unhandled rejections when a streaming request is aborted.",
+    "where": "GitHub issue on OpenRouterTeam/ai-sdk-provider",
+    "ids": [
+     "gh:6148721017"
+    ]
+   },
+   {
+    "issue": "Sub-cent prices are rounded to two decimal places in scripts, making them appear as $0.00.",
+    "where": "GitHub issue on OpenRouterTeam/skills",
+    "ids": [
+     "gh:6175362029"
+    ]
+   },
+   {
+    "issue": "Invalid API keys silently cause performance queries to fail, making it impossible to distinguish authentication errors from models with no metrics.",
+    "where": "GitHub issue on OpenRouterTeam/skills",
+    "ids": [
+     "gh:6175373333"
+    ]
+   }
+  ],
+  "in_other_tools": [
+   {
+    "issue": "Hermes Agent's session_model_usage logs only track about 22% of actual OpenRouter API costs, missing gateway-internal LLM calls.",
+    "where": "Hermes Agent",
+    "ids": [
+     "gh:6145463663"
+    ]
+   },
+   {
+    "issue": "Cline shows a price for GLM5.3-flash that does not match the actual, more expensive provider used by OpenRouter.",
+    "where": "Cline",
+    "ids": [
+     "gh:6146755701"
+    ]
+   },
+   {
+    "issue": "LiteLLM SDK raises an opaque error for HTTP 200 responses it cannot parse, losing usage data and causing retries.",
+    "where": "LiteLLM",
+    "ids": [
+     "gh:6176717173"
+    ]
+   },
+   {
+    "issue": "Zed reports roughly 4x fewer tokens than OpenRouter for the same chat interaction.",
+    "where": "Zed",
+    "ids": [
+     "gh:6231108018"
+    ]
+   }
+  ],
+  "answer_once": [
+   {
+    "question": "What are good free AI coding tools and models available on OpenRouter?",
+    "ids": [
+     "rd:t3_1xk0qaz",
+     "rd:t3_1xk0qfq",
+     "rd:t3_1xnjy3h"
+    ]
+   },
+   {
+    "question": "What is the cheapest and most reliable way to top up an OpenRouter account?",
+    "ids": [
+     "rd:t3_1xmqmmp",
+     "rd:t3_1xmrqtk"
+    ]
+   },
+   {
+    "question": "How does OpenRouter's pricing compare to direct subscriptions and other providers?",
+    "ids": [
+     "rd:t3_1xo3cqx",
+     "rd:t3_1xnyjcn",
+     "hn:50378366",
+     "hn:50375312"
+    ]
+   },
+   {
+    "question": "How does OpenRouter's Zero Data Retention (ZDR) compare to direct provider policies for production use?",
+    "ids": [
+     "rd:t3_1xocqpc",
+     "rd:t3_1xo5ird"
+    ]
+   },
+   {
+    "question": "Which OpenRouter models are best for uncensored NSFW or roleplay content?",
+    "ids": [
+     "rd:t3_1xnrf31",
+     "rd:t3_1xpomfp",
+     "rd:t3_1xorcf0"
+    ]
+   },
+   {
+    "question": "How can users force OpenRouter to use the cheapest provider for a model?",
+    "ids": [
+     "rd:t3_1xndh8w",
+     "rd:t3_1xndhds"
+    ]
+   }
+  ],
+  "liked": [
+   {
+    "what": "Users praise OpenRouter's pricing transparency and ability to route to the cheapest providers for open-source models.",
+    "ids": [
+     "hn:50368933",
+     "hn:50399948"
+    ]
+   },
+   {
+    "what": "Developers share tools and integrations built on OpenRouter, including Convo (a frontend), Cosmion (CLI for image generation), and plugins for OpenCode.",
+    "ids": [
+     "rd:t3_1xl9lss",
+     "rd:t3_1xmt64r",
+     "rd:t3_1xn1tqf"
+    ]
+   },
+   {
+    "what": "Users report significant cost savings by switching to DeepSeek v4.1 Flash and other open-weight models via OpenRouter.",
+    "ids": [
+     "hn:50323531",
+     "hn:50328181",
+     "hn:50378366"
+    ]
+   },
+   {
+    "what": "A user cut LLM API token spend by 78% by auditing billing CSVs from OpenRouter and other providers.",
+    "ids": [
+     "rd:t3_1xo2m40"
+    ]
+   }
+  ],
+  "post_back": "This week we heard about API keys stolen from fifteen users, with balances drained and activity traced to Janitor. We also saw DeepSeek account for 53% of all tokens on OpenRouter, with many praising its low cost. Users asked about payment methods, GST charges in India, and how to get the best value from credits. Several reported issues with crypto top-ups and confusion about combining OpenRouter with other subscriptions. Developers shared tools built on OpenRouter, including frontends, CLI tools, and plugins. We also heard questions about model availability, provider routing, and why specific models are excluded from auto-routing.\n\nFor those who've had their keys compromised or are concerned about security: what steps have you taken to protect your account, and what would help you feel more secure?"
+ },
+ "stats": {
+  "items": 456,
+  "about_openrouter": 228,
+  "by_source": {
+   "github_tools": 76,
+   "reddit": 221,
+   "hackernews": 150,
+   "github_openrouter": 9
+  },
+  "relevant_by_source": {
+   "reddit": 111,
+   "hackernews": 81,
+   "github_tools": 27,
+   "github_openrouter": 9
+  },
+  "by_kind": {
+   "question": 48,
+   "bug": 36,
+   "complaint": 29,
+   "other": 29,
+   "showcase": 28,
+   "comparison": 21,
+   "news": 16,
+   "praise": 15,
+   "feature_request": 6
+  },
+  "by_area": {
+   "pricing": 52,
+   "model_availability": 41,
+   "integrations": 32,
+   "credits_and_billing": 24,
+   "errors_and_failures": 18,
+   "other": 14,
+   "provider_routing": 12,
+   "free_models": 11,
+   "privacy_and_data": 10,
+   "sdks_and_docs": 7,
+   "tool_calling": 4,
+   "rate_limits": 2,
+   "latency_and_uptime": 1
+  },
+  "sentiment": {
+   "0": 90,
+   "1": 57,
+   "-1": 81
+  },
+  "models": {
+   "Claude": 14,
+   "DeepSeek": 9,
+   "Deepseek": 7,
+   "Claude Code": 6,
+   "Codex": 6,
+   "DeepSeek V4.1 Flash": 6,
+   "GLM": 6,
+   "Crouton Alpha": 5,
+   "GLM 5.3 Flash": 4,
+   "OpenAI": 4,
+   "deepseek/deepseek-v4.1-flash-1017": 4,
+   "GLM-5.3": 4,
+   "Hermes": 4,
+   "Gemini Omni 1.2 Flash": 4,
+   "GPT": 3
+  }
+ },
+ "model": "anthropic/claude-sonnet-4.5",
+ "dropped_ids": 0,
+ "flags": [],
+ "cost": {
+  "usd": 0.1016,
+  "calls": 1,
+  "by_model": {
+   "anthropic/claude-sonnet-4.5": {
+    "calls": 1,
+    "usd": 0.1016,
+    "in": 20368,
+    "out": 2702,
+    "seconds": 56.3
+   }
+  }
+ }
+}

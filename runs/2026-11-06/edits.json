@@ -1,0 +1,30 @@
+{
+ "note": "Lines changed by hand after the model wrote the digest. The renderer applies them and lists each one, with the reason, on the page.",
+ "headline": {
+  "text": "Two Reddit threads report OpenRouter keys stolen and balances drained, one of them counting 15 cases. The cause is unconfirmed, and it is the thread to answer first.",
+  "ids": ["rd:t3_1xn9dcv", "rd:t3_1xnrjwy"],
+  "why": "The model gave one post's count and its suspected cause as established fact, and named a third-party site as the source."
+ },
+ "themes": {
+  "0": {
+   "title": "DeepSeek's share of traffic",
+   "what": "Several posts shared a third-party chart (dirac.run) putting DeepSeek at 53% of OpenRouter's tokens on one day. Developers on Hacker News say DeepSeek v4.1 Flash does much of their work for a small part of what closed models cost.",
+   "why": "The model reported the 53% as OpenRouter's own figure; the posts cite a third-party chart."
+  }
+ },
+ "for_engineering": {
+  "remove": [0, 2],
+  "why": "Two items were bugs in OpenCode, a tool that uses OpenRouter, not in OpenRouter. One moved to the list for other tools; the other (a quota check timing out in a third-party script) was dropped."
+ },
+ "in_other_tools": {
+  "add": [{"issue": "OpenCode's gateway refuses free models with a 400 error, because its provider setting allows only Anthropic.", "where": "OpenCode", "ids": ["gh:6165614174"]}],
+  "why": "Moved from the engineering list."
+ },
+ "liked": {
+  "3": {"what": "One post reports cutting LLM spend by 78% after auditing billing exports from OpenRouter and other providers.", "why": "Worded as a report, since it rests on one post."}
+ },
+ "post_back": {
+  "text": "What came up about OpenRouter in public this week.\nTwo Reddit threads report keys stolen and balances drained. If you have ever pasted a key into a third-party app, check your activity log, set a credit limit on the key, and rotate it if anything looks off.\nThe questions we saw most: the cheapest way to top up, how zero data retention compares with going direct, and how to send a model to its cheapest provider. DeepSeek's share of traffic was the week's talking point, and a lot of you shared what you built: frontends, CLI tools, plugins.\nOne question back: when you give your key to an app, what would make you trust it?",
+  "why": "The model's draft repeated the unconfirmed cause by name and the third-party figure as fact. Rewritten by hand, with the same content otherwise."
+ }
+}

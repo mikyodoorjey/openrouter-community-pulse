@@ -1,0 +1,38 @@
+{
+ "window_start": "2026-10-31T00:40+00:00",
+ "window_end": "2026-11-07T00:40+00:00",
+ "counts": {
+  "github_tools": 76,
+  "reddit": 221,
+  "hackernews": 150,
+  "github_openrouter": 9
+ },
+ "tools": [
+  "cline/cline",
+  "RooCodeInc/Roo-Code",
+  "Kilo-Org/kilocode",
+  "open-webui/open-webui",
+  "BerriAI/litellm",
+  "Aider-AI/aider",
+  "continuedev/continue",
+  "SillyTavern/SillyTavern",
+  "zed-industries/zed",
+  "anomalyco/opencode",
+  "charmbracelet/crush",
+  "aaif-goose/goose",
+  "LibreChat-AI/LibreChat",
+  "n8n-io/n8n",
+  "NousResearch/hermes-agent",
+  "openai/codex",
+  "vercel/ai",
+  "langchain-ai/langchainjs",
+  "run-llama/llama_index",
+  "crewAIInc/crewAI",
+  "janhq/jan",
+  "lobehub/lobehub",
+  "google-gemini/gemini-cli",
+  "anthropics/claude-code",
+  "microsoft/autogen"
+ ],
+ "note": "Reddit posts on personal profiles removed after collection (9); the collector now skips them."
+}
